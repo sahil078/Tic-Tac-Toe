@@ -1,0 +1,117 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(24, 96, 135, 0.966) , rgb(74, 107, 132) , rgba(30, 48, 37, 0.942));
+}
+.nav{
+    width: 100vw;
+    height: 10vh;
+    background: #000;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: calc(100% - 10vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    flex-direction: column;
+
+}
+.container h2{
+    font-size: 3rem;
+    font-family: cursive;
+    font-weight: 900;
+}
+.game-container{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3 , 8vw);
+    grid-template-rows: repeat(3 , 8vw);
+    font-family:'Roboto', sans-serif;
+    position: relative;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgb(58, 3, 29);
+    border-radius: 10px;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+.boxtext{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6vw;
+    font-weight: 600;
+    -webkit-text-stroke: 2px rgb(21, 230, 202);
+    color: transparent;
+}
+.box:hover{
+    background-color: rgb(33, 33, 62);
+}
+
+
+.line{
+    background-color: lightgoldenrodyellow;
+    width: 0vw;
+    height: 2vh;
+    border-radius: 10px ;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+.gameInfo{
+    margin-top: 2vh;
+    display: flex;
+    align-items: center;
+}
+.info{
+    font-family: 'Segoe UI';
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1vw;
+
+}
+#reset{
+    padding: 5px 20px;
+    font-size: 1em;
+    font-family: ui-monospace;
+    font-weight: 500;
+    border: none;
+    border-radius: 7px;
+    background-color: lightcyan;
+}
+
+@media (width <= 600px)  {
+    .game-container{
+        margin-top: 5vh;
+        display: grid;
+        grid-template-columns: repeat(3 , 15vw);
+        grid-template-rows: repeat(3 , 15vw);
+        font-family:'Roboto', sans-serif;
+        position: relative;
+    } 
+
+}
+@media (width <= 900px)  {
+    .game-container{
+        margin-top: 5vh;
+        display: grid;
+        grid-template-columns: repeat(3 , 10vw);
+        grid-template-rows: repeat(3 , 10vw);
+        font-family:'Roboto', sans-serif;
+        position: relative;
+    } 
+
+}
